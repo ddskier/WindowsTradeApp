@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QUOTEDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="QUOTE">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+            <PropertyRef Name="QUOTEID" />
+          </Key>
+          <Property Name="LOW" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="OPEN1" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="VOLUME" Type="float" Nullable="false" />
+          <Property Name="PRICE" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="HIGH" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="COMPANYNAME" Type="varchar" MaxLength="250" />
+          <Property Name="SYMBOL" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CHANGE1" Type="float" Nullable="false" />
+          <Property Name="QUOTEID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="QUOTEDBModelStoreContainer">
+          <EntitySet Name="QUOTE" EntityType="Self.QUOTE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QUOTEDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="QUOTE">
+          <Key>
+            <PropertyRef Name="SYMBOL" />
+            <PropertyRef Name="QUOTEID" />
+          </Key>
+          <Property Name="LOW" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="OPEN1" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="VOLUME" Type="Double" Nullable="false" />
+          <Property Name="PRICE" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="HIGH" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="COMPANYNAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SYMBOL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CHANGE1" Type="Double" Nullable="false" />
+          <Property Name="QUOTEID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="QUOTEDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="QUOTEs" EntityType="Self.QUOTE" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QUOTEDBModelStoreContainer" CdmEntityContainer="QUOTEDBEntities">
+          <EntitySetMapping Name="QUOTEs">
+            <EntityTypeMapping TypeName="QUOTEDBModel.QUOTE">
+              <MappingFragment StoreEntitySet="QUOTE">
+                <ScalarProperty Name="LOW" ColumnName="LOW" />
+                <ScalarProperty Name="OPEN1" ColumnName="OPEN1" />
+                <ScalarProperty Name="VOLUME" ColumnName="VOLUME" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="HIGH" ColumnName="HIGH" />
+                <ScalarProperty Name="COMPANYNAME" ColumnName="COMPANYNAME" />
+                <ScalarProperty Name="SYMBOL" ColumnName="SYMBOL" />
+                <ScalarProperty Name="CHANGE1" ColumnName="CHANGE1" />
+                <ScalarProperty Name="QUOTEID" ColumnName="QUOTEID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
