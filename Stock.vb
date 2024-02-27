@@ -1,7 +1,4 @@
-﻿Imports System.Data.Entity
-Imports System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder
-Imports System.Data.Entity.Migrations
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 
 Public Class Stock
 

@@ -1,10 +1,4 @@
-﻿Imports System.Data.Entity ' Import Entity Framework namespace
-Imports System.Data.Entity.Core
-Imports System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder
-Imports System.Data.Entity.Migrations
-Imports System.Data.SqlClient
-Imports System.Runtime.ConstrainedExecution
-Imports System.Runtime.Remoting.Contexts
+﻿Imports System.Data.SqlClient
 
 'This Form Uses ADO.NET Entity Framework, a more "factored" approach toi database access with auto-built model classes 
 Public Class Holdings

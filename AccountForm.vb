@@ -1,6 +1,4 @@
-﻿Imports System.Data.Entity.Core
-Imports System.Data.SqlClient
-Imports System.Configuration
+﻿Imports System.Data.SqlClient
 
 ' This VB Form Is Built Using Pure ADO.NET, with No Model Classes for Database or use of the Entity Framework, or Business Logic Classes 
 ' It illustrates a more manual/spagetti approach in a Win Forms App, to test migration via ChatGPT to Blazor/Razor and C#

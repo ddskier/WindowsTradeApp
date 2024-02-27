@@ -1,9 +1,4 @@
-﻿Imports System.Data.Entity
-Imports System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder
-Imports System.Data.Entity.Migrations
-Imports System.Data.SqlClient
-Imports System.Runtime.ConstrainedExecution
-Imports System.Runtime.Remoting.Contexts
+﻿Imports System.Data.SqlClient
 Public Class AccountCurrent
     Public Property Password As String
     Public Property UserID As String
@@ -19,11 +14,7 @@ Public Class AccountCurrent
         theAccount.UserID = userid
         Using accountcontext As New ACCOUNTDBEntities()
 
-            'START WHERE OK
-
             'Dim result = accountcontext.ACCOUNTPROFILEs.SqlQuery("Select * FROM dbo.ACCOUNTPROFILE WHERE USERID = '" + userid + "'")
-
-
 
             ' Assuming "userid" is a variable containing the user's ID you're interested in
             Dim parameter = New SqlParameter("@userId", userid)

@@ -1,8 +1,4 @@
-﻿Imports System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder
-Imports System.Reflection.Emit
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-'This Form Uses ADO.NET Entity Framework, a more "factored" approach toi database access with auto-built model classes 
+﻿'This Form Uses ADO.NET Entity Framework, a more "factored" approach toi database access with auto-built model classes 
 
 Public Class BuyForm
     Dim symbol As String

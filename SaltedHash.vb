@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Security.Cryptography
+﻿Imports System.Security.Cryptography
 Imports System.Text
 
 Public NotInheritable Class SaltedHash
